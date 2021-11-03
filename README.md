@@ -2,21 +2,22 @@
 This is the api for prediction of fashion mnist based on the data provided to it.
 This model will return you the prediction of image which will predict the class of fashion items by using CNN.
 
-Here is the classes which sepearates the identification of model
-{
-    0 : "T-shirt/top",
-    1 : "Trouser",
-    2 : "Pullover",
-    3 : "Dress",
-    4 : "Coat",
-    5 : "Sandal",
-    6 : "Shirt",
-    7 : "Sneaker",
-    8 : "Bag",
-    9 : "Ankle boot"
-}
 
- 
+### Labels
+Each training and test example is assigned to one of the following labels:
+
+| Label | Description |
+| --- | --- |
+| 0 | T-shirt/top |
+| 1 | Trouser |
+| 2 | Pullover |
+| 3 | Dress |
+| 4 | Coat |
+| 5 | Sandal |
+| 6 | Shirt |
+| 7 | Sneaker |
+| 8 | Bag |
+| 9 | Ankle boot | 
 
 API for fashion mnist dataset
 Steps for training  of your model based on the dataset
