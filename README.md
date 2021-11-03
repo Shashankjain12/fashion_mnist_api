@@ -40,3 +40,37 @@ We can test the model by passing the new image which we want to predict and base
 ```
 It will return us the predicted item given as an image to it
 
+## Step 3 :- Running an Api on the server
+Api can be run on server by 
+
+```
+   python py/app.py
+```
+
+Our api is connected to swagger UI which can be viewed on localhost:5000/api. api is the endpoint where all of the application framework is hosted.
+
+Also to get the predictions of the model hosted one need to pass image on which the identification need to be done. And with the namespace as fashion_mnist/predict where the api endpoint can be executed.
+
+One can execute the curl request by
+
+```
+curl -X 'POST' \
+  'http://127.0.0.1:5000/api/fashion_mnist/predict/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@sample_image.jpg;type=image/jpeg'
+```
+
+And the response body will be where the prediction will be the associated prediction of the image which is received:-
+```
+{
+  "Output_filename": "sample_image_0.jpg",
+  "prediction": "Pullover",
+  "probability": "99.99914169311523%"
+}
+```
+
+One can access swagger page to get an interactive way to get the prediction on
+```
+http://127.0.0.1:5000/api/
+```
